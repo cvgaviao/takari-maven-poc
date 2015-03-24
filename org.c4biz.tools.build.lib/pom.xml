@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.c4biz.tools.build</groupId>
+		<artifactId>org.c4biz.tools.build</artifactId>
+		<version>0.1.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>org.c4biz.tools.build.lib</artifactId>
+	<packaging>takari-jar</packaging>
+
+	<dependencies>
+		<dependency>
+			<groupId>io.takari</groupId>
+			<artifactId>incrementalbuild</artifactId>
+			</dependency>
+		<dependency>
+			<groupId>org.apache.maven.plugin-tools</groupId>
+			<artifactId>maven-plugin-annotations</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.plexus</groupId>
+			<artifactId>plexus-archiver</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.takari.m2e.workspace</groupId>
+			<artifactId>org.eclipse.m2e.workspace.cli</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.maven</groupId>
+			<artifactId>maven-plugin-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.maven</groupId>
+			<artifactId>maven-core</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.sisu</groupId>
+				<artifactId>sisu-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>io.takari.maven.plugins</groupId>
+				<artifactId>takari-lifecycle-plugin</artifactId>
+				<extensions>true</extensions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

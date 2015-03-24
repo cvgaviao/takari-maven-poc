@@ -1,0 +1,1 @@
+# takari-maven-poc
